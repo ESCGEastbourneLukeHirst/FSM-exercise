@@ -19,6 +19,7 @@ public class Moving : Grounded
         _horizontalInput = Input.GetAxis("Horizontal");
         if (Mathf.Abs(_horizontalInput) < Mathf.Epsilon)
             stateMachine.ChangeState(sm.idleState);
+            sm.anim.SetBool("move", false);
     }
 
     public override void UpdatePhysics()

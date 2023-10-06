@@ -19,6 +19,7 @@ public class Idle : Grounded
         _horizontalInput = Input.GetAxis("Horizontal");
         if (Mathf.Abs(_horizontalInput) > Mathf.Epsilon)
             stateMachine.ChangeState(sm.movingState);
+            sm.anim.SetBool("move", true);
 
         if (Input.GetKeyDown(KeyCode.V) == true)
             stateMachine.ChangeState(sm.attackState);
