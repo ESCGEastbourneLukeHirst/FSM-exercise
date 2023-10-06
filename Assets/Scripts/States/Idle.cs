@@ -27,6 +27,8 @@ public class Idle : Grounded
 
         if (Input.GetKeyDown(KeyCode.M) == true)
             stateMachine.ChangeState(sm.deadState);
+            Debug.Log("DEAD!");
+            sm.anim.SetBool("dead", true);
     }
 
 }

@@ -22,10 +22,10 @@ public class Die : BaseState
         if (Input.GetKeyDown(KeyCode.M) == false)
         {
             sm.timer -= Time.deltaTime;
-            Debug.Log("DEAD!");
             if (sm.timer <= 0)
             {
                 stateMachine.ChangeState(sm.idleState);
+                sm.anim.SetBool("dead", false);
                 sm.timer = 0;
             }
         }
