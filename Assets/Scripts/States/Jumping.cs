@@ -33,7 +33,7 @@ public class Jumping : BaseState
     {
         base.UpdatePhysics();
         _grounded = _sm.rigidbody.velocity.y < Mathf.Epsilon && _sm.rigidbody.IsTouchingLayers(_groundLayer);
-        _sm.anim.SetBool("spin", false);
+        _sm.anim.SetBool("spin", true);
     }
 
 }

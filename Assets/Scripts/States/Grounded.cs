@@ -13,8 +13,8 @@ public class Grounded : BaseState
     {
         base.UpdateLogic();
         if (Input.GetKeyDown(KeyCode.Space))
-        stateMachine.ChangeState(sm.jumpingState);
-        sm.anim.SetBool("spin", true);
+            stateMachine.ChangeState(sm.jumpingState);
+            sm.anim.SetBool("spin", false);
     }
 
 }
